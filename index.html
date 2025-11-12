@@ -8,7 +8,8 @@
 <meta name="theme-color" content="#006166" />
 <style>
   body {
-    background-color: #006166;
+     background: url("Background .png") no-repeat center center fixed;
+    background-size: cover;
     position: relative;
     overflow-y: auto;
     color: white;
@@ -21,8 +22,13 @@
 </style>
 </head>
 <body class="min-h-screen flex items-start justify-center p-4">
+  <!-- زر التحويل إلى العربية -->
+  <a href="arabic.html"
+     class="fixed top-3 right-3 px-3 py-1.5 rounded-full border border-white/60 text-xs font-medium">
+    العربية
+  </a>
+
   <main class="w-full max-w-sm mx-auto text-white">
-    <!-- Avatar + name -->
     <div class="text-center">
       <img src="Dr.Tahani Aljafari.png" alt="Dr. Tahani Aljafari"
         class="w-28 h-28 rounded-full ring-4 ring-white object-cover mx-auto mt-6 relative z-10" />
@@ -32,7 +38,6 @@
       </h2>
     </div>
 
-    <!-- Links -->
     <div class="mt-6 space-y-3 text-left text-[13px]">
       <a href="tel:+966507333868" class="flex items-center gap-2">
         <img src="Picture1.png" alt="Phone Icon" class="icon-img" />
@@ -52,20 +57,17 @@
       </a>
     </div>
 
-    <!-- Save contact button -->
     <button id="saveBtn"
       class="mt-7 w-2/3 mx-auto block rounded-full bg-green-400 text-white font-medium py-2 text-sm active:scale-[0.99] hover:bg-green-300 transition">
       + Save contact
     </button>
 
-    <!-- Logos row centered -->
     <div class="mt-8 flex flex-col items-center gap-3 mb-8">
       <img src="RSMC Logo.png" alt="Riyadh Schools Misk City" class="w-2/3 mx-auto block" />
       <img src="أيقونات-١٩.png" alt="Misk and Riyadh Schools Group" class="w-2/3 mx-auto block rounded-lg" />
     </div>
   </main>
 
-  <!-- Save Contact (vCard) -->
   <script>
   document.getElementById('saveBtn').addEventListener('click', () => {
     const vcard = [
@@ -95,3 +97,5 @@
   </script>
 </body>
 </html>
+
+
