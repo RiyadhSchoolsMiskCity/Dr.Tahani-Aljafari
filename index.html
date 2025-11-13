@@ -9,12 +9,15 @@
 <style>
   body{
     background:url("Background and logo attached .png") no-repeat center center fixed;
-    background-size:cover; position:relative; overflow-y:auto; color:white;
+    background-size:cover;
+    position:relative;
+    overflow-y:auto;
+    color:white;
   }
   a{ text-decoration:none; color:#fff }
   a:hover{ opacity:.85 }
-  .icon-img{ height:22px; filter:brightness(0) invert(1) }      /* أكبر */
-  .icon-email{ width:24px; height:auto; filter:brightness(0) invert(1) } /* أكبر */
+  .icon-img{ height:22px; filter:brightness(0) invert(1) }
+  .icon-email{ width:24px; height:auto; filter:brightness(0) invert(1) }
   main{ position:relative; z-index:1 }
 </style>
 </head>
@@ -25,7 +28,8 @@
     العربية
   </a>
 
-  <main class="w-full max-w-sm mx-auto text-white pb-16">
+  <!-- زودنا الـ padding السفلي عشان الزر يطلع فوق وما يغطي الشعار -->
+  <main class="w-full max-w-sm mx-auto text-white pb-32">
     <div class="text-center">
       <img src="Dr.Tahani Aljafari.png" alt="Dr. Tahani Aljafari"
         class="w-28 h-28 rounded-full ring-4 ring-white object-cover mx-auto mt-6 relative z-10" />
@@ -35,7 +39,6 @@
       </h2>
     </div>
 
-    <!-- معلومات التواصل أكبر ومسافات أوسع -->
     <div class="mt-8 space-y-4 text-left text-base sm:text-lg leading-relaxed">
       <a href="tel:+966507333868" class="flex items-center gap-3 py-2 px-2 rounded-lg hover:bg-white/5">
         <img src="Picture1.png" alt="Phone Icon" class="icon-img" />
@@ -55,9 +58,9 @@
       </a>
     </div>
 
-    <!-- زر حفظ جهة الاتصال أنزل وأعرض وأوضح -->
+    <!-- زر حفظ جهة الاتصال صار أعلى وما يغطي الشعارات -->
     <button id="saveBtn"
-      class="mt-9 w-full max-w-xs mx-auto block rounded-full bg-green-400 text-white font-semibold py-3 text-base active:scale-[0.99] hover:bg-green-300 transition">
+      class="mt-8 w-full max-w-xs mx-auto block rounded-full bg-green-400 text-white font-semibold py-3 text-base active:scale-[0.99] hover:bg-green-300 transition">
       + Save contact
     </button>
   </main>
@@ -78,11 +81,15 @@
     const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
-    a.href = url; a.download = 'Dr_Tahani_Aljafari.vcf';
-    document.body.appendChild(a); a.click();
+    a.href = url;
+    a.download = 'Dr_Tahani_Aljafari.vcf';
+    document.body.appendChild(a);
+    a.click();
     setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 1500);
   });
   </script>
 </body>
 </html>
+
+
 
