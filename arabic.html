@@ -74,16 +74,20 @@
 
 <script>
 document.getElementById('saveBtn').addEventListener('click', () => {
-  const vcard = [
-    'BEGIN:VCARD','VERSION:3.0',
-    'N:Aljafari;Tahani;;;','FN:Dr. Tahani Aljafari',
-    'TITLE:Director General','ORG:Riyadh Schools Misk City',
-    'TEL;TYPE=CELL,VOICE:+966507333868',
-    'EMAIL;TYPE=INTERNET:t.aljafari@RSMC.edu.sa',
-    'URL:https://rsg.edu.sa/RSMiskCity/',
-    'item1.URL:https://uk.linkedin.com/in/tahani-aljafari-phd-09422b269',
-    'item1.X-ABLabel:LinkedIn','END:VCARD'
-  ].join('\n');
+ const vcard = [
+  'BEGIN:VCARD','VERSION:3.0',
+  'N:الجعفري;تهاني;;;',
+  'FN:د. تهاني الجعفري',
+  'TITLE:المدير العام',
+  'ORG:مدارس الرياض مدينة مسك',
+  'TEL;TYPE=CELL,VOICE:+966507333868',
+  'EMAIL;TYPE=INTERNET:t.aljafari@RSMC.edu.sa',
+  'URL:https://rsg.edu.sa/RSMiskCity/',
+  'item1.URL:https://uk.linkedin.com/in/tahani-aljafari-phd-09422b269',
+  'item1.X-ABLabel:LinkedIn',
+  'END:VCARD'
+].join('\n');
+
 
   const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
   const url = URL.createObjectURL(blob);
@@ -98,6 +102,7 @@ document.getElementById('saveBtn').addEventListener('click', () => {
 
 </body>
 </html>
+
 
 
 
